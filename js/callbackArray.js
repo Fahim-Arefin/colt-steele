@@ -131,9 +131,14 @@ books.forEach(n=>{
     console.log(`rating = ${n.rating}`)
     console.log(`year = ${n.year}`)
 })
+// let ignoreYear = books.map(({name,rating})=>{
+//     return {name,rating}
+// })
 let ignoreYear = books.map(({name,rating})=>{
-    return {name,rating}
+    return `${name} is rated ${rating}`
 })
+
+
 
 console.log(ignoreYear)
 
