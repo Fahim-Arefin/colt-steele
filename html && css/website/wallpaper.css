@@ -1,0 +1,13 @@
+img {
+  width: 45%;
+  margin: calc(10% / 4);
+}
+nav {
+  margin-left: calc(10% / 4);
+  padding: 10px 0;
+  border-bottom: 3px solid hsl(0, 4%, 86%);
+  width: 45%;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Blaka Hollow", cursive;
+}

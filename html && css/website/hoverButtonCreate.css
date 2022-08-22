@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background-color:#151B29;
+}
+button{
+    padding: 10px 20px;
+    border: 3px solid #ffa260;
+    background-color:rgb(5, 0, 45);
+    color: #ffa260;
+    transition: all .25s;
+}
+button:hover{
+    margin-bottom: 15px;
+    cursor: pointer;
+    border: 3px solid #f1ff5c;
+    color: white;
+    box-shadow: 0px 4px 5px -1px #f1ff5c;
+}

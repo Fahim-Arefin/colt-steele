@@ -1,0 +1,25 @@
+#section01{
+    height: 800px;
+    width: 800px;
+    background-color: violet;
+}
+#rgba{
+    height: 50%;
+    width: 50%;
+    background-color: rgba(174, 76, 18, .4);
+}
+#section02{
+    height: 800px;
+    width: 800px;
+    background-color: violet;
+    margin-left: 200px;
+}
+#opacity{
+    height: 50%;
+    width: 50%;
+    background-color: yellowgreen;
+    opacity: .7;
+}
+section{
+    display: inline-block;
+}

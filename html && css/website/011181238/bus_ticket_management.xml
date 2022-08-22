@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.5
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jul 26, 2022 at 08:39 AM
+- Server version: 10.1.38-MariaDB
+- PHP Version: 7.3.3
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="bus_ticket_management" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="ticket_booking">
+                CREATE TABLE `ticket_booking` (
+                  `ID` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(50) NOT NULL,
+                  `apptdate` varchar(50) NOT NULL,
+                  `fromlocation` varchar(50) NOT NULL,
+                  `tolocation` varchar(50) NOT NULL,
+                  `status` varchar(30) NOT NULL,
+                  PRIMARY KEY (`ID`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'bus_ticket_management'
+    -->
+    <database name="bus_ticket_management">
+        <!-- Table ticket_booking -->
+        <table name="ticket_booking">
+            <column name="ID">2</column>
+            <column name="name">fahim </column>
+            <column name="apptdate">26aug</column>
+            <column name="fromlocation">dhaka</column>
+            <column name="tolocation">sylhat</column>
+            <column name="status">booked</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="ID">4</column>
+            <column name="name">fahim arefin</column>
+            <column name="apptdate">29jul</column>
+            <column name="fromlocation">dhaka</column>
+            <column name="tolocation">noakhali</column>
+            <column name="status">booked</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="ID">8</column>
+            <column name="name">tg</column>
+            <column name="apptdate">29jul</column>
+            <column name="fromlocation">dhaka</column>
+            <column name="tolocation">comilla</column>
+            <column name="status">booked</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="ID">9</column>
+            <column name="name">asdsa</column>
+            <column name="apptdate">adsas</column>
+            <column name="fromlocation">dadasd</column>
+            <column name="tolocation">dadsa</column>
+            <column name="status">booked</column>
+        </table>
+        <table name="ticket_booking">
+            <column name="ID">10</column>
+            <column name="name">fahim</column>
+            <column name="apptdate">dsa</column>
+            <column name="fromlocation">dsaas</column>
+            <column name="tolocation">dsads</column>
+            <column name="status">booked</column>
+        </table>
+    </database>
+</pma_xml_export>

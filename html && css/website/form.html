@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>From Demo</h1>
+    <form action="tacos">
+        <p>
+            <label for="username">Enter a username</label>
+            <input type="text" name="username" id="username">
+        </p>
+        <p>
+            <label for="password">Enter a password</label>
+            <input type="password" name="password" id="password">
+        </p>
+        <button>submit</button>
+    </form>
+    <hr>
+    <h2>Hijacking Search Engine</h2>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search google</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search Youtube</button>
+    </form>
+    <hr>
+    <h2>More Inputs</h2>
+    <div>
+        <h3>choose your lunch item from below</h3>
+        <form action="dinner">
+            <input type="checkbox" name="beef" id="beef">
+            <label for="beef">beef resala</label>
+            <br>
+            <input type="checkbox" name="chicken" id="chicken">
+            <label for="chicken">fried chicken</label>
+            <br>
+            <input type="checkbox" name="prown" id="prown">
+            <label for="prown">prown soup</label>
+            <br>
+            <p>
+                <button>submit</button>
+            </p>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h3>choose your jersey size</h3>
+        <form action="jersey">
+            <input type="radio" name="radio" id="s" value="small">
+            <label for="s">S</label>
+            <br>
+            <input type="radio" name="radio" id="l" value="large">
+            <label for="l">L</label>
+            <br>
+            <input type="radio" name="radio" id="xl" value="extra-large">
+            <label for="xl">XL</label>
+            <br>
+            <input type="radio" name="radio" id="xxl" value="extra-extra-large">
+            <label for="xxl">XXL</label>
+            <br>
+            <p>
+                <button>submit</button>
+            </p>
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h3>choose your favourate programming language</h3>
+        <form action="sadas">
+            <label for="language">favourate language: </label>
+            <select name="language" id="language">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript" selected>JAVASCRIPT</option>
+                <option value="php">PHP</option>
+                <option value="mysql">MYSQL</option>
+            </select>
+            <p>
+                <button>submit</button>
+            </p>
+            
+        </form>
+    </div>
+    <hr>
+    <div>
+        <h3>Range and textArea</h3>
+        <form action="sad">
+            <label>Select Your cheese amount</label>
+            <input type="range" name="cheese" min="1" max="100" step="10">
+            <button>submit</button>
+        </form>
+    </div>
+    <hr>
+    <br>
+    <p style="text-align: center;">
+        &copy; copyright by MA Fahim
+    </p> 
+</body>
+
+</html>

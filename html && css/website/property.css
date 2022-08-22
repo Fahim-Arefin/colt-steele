@@ -1,0 +1,21 @@
+h1,h2 {
+    color: #ef6351;
+    /* background-color: #ccc5b9; */
+    text-align: center;
+    text-decoration: underline;
+    font-family: Lucida Console;
+}
+h1{
+    font-size: 50px;   
+}
+h2{
+    font-size: 30px;
+}
+
+p{
+    color: #403d58;
+    background-color: #cdb4db;
+    line-height: 1.7;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

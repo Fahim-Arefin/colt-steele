@@ -1,0 +1,12 @@
+img{
+    width: 30%;
+    margin: 1.666%;
+}
+nav{
+    font-size: 20px;
+    margin-left: 1.666%;
+    padding: 10px 0;
+    border-bottom: 3px solid #f1f1f1;
+    width: 30%;
+    font-family: 'Cormorant SC', serif;
+}
