@@ -89,7 +89,10 @@ console.log(sum(1,2,3))
 console.log(sum(1,2,8))
 console.log(sum(8))
 console.log(sum(8,8,2,6,3))
+let arrayofNumber=[8,8,2,6,5,3]
 
+let a = sum(...arrayofNumber)
+console.log(a)
 
 function raceList(gold,silver,...restOfthePerticipant){
     console.log(`Gold medel goes to - ${gold}`);
