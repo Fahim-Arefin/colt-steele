@@ -27,3 +27,16 @@ function createNode(username,tweet){
     li.append(` - ${tweet}`)
     return li
 }
+
+
+//Event deligation
+//li will create in runtime so we should select ul (li parent) because parent is there in creation time
+//ul is present from the beganning.so we must add event listener to parent and 
+//use e.target.remove() 
+const ul = document.querySelector('.result ul')
+ul.addEventListener('click',(e)=>{
+    // console.dir(e.target)
+    if(e.target.nodeName==='LI'){ //make sure clicked on LI
+        e.target.remove()
+    }
+})
