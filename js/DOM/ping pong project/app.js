@@ -6,7 +6,7 @@ let playerOneSpan = document.querySelector('#p1span')
 let playerTwoSpan = document.querySelector('#p2span')
 
 
-let winningScore;
+let winningScore=5;
 let playerOneScore = 0;
 let playerTwoScore = 0;
 
@@ -51,6 +51,7 @@ playerTwo.addEventListener('click', () => {
 reset.addEventListener('click',()=>{
     resetValue()
     winningScoreObj.value='5'
+    winningScore=5
 })
 function resetValue(){
     playerOneSpan.classList.remove('success')
