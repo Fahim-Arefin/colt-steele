@@ -1,0 +1,109 @@
+h1 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    color: #2f006c;
+}
+
+body {
+    font-family: 'Domine';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    /* background-color: cadetblue; */
+}
+
+.imgspan {
+    width: 30%;
+    height: 47%;
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+span {
+    align-self: flex-start;
+    margin-left: .6em;
+    margin-bottom: 1em;
+    color: #073f4a;
+    font-weight: 700;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.btnContainer {
+    margin-top: 10px;
+    width: 30%;
+    height: 25%;
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+/* div{
+    background-color: #b95704;
+    border: 1px solid red;
+} */
+#btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.button {
+    box-sizing: border-box;
+    padding: 3% 5%;
+    border: none;
+    border-radius: .4em;
+    color: white;
+    background-color: #b95704;
+    font-weight: 700;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #984a06;
+}
+
+.button:active {
+    cursor: pointer;
+    background-color: #834005;
+}
+
+select {
+    width: 10%;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.success {
+    color: green
+}
+
+.loose {
+    color: red
+}
+
+.disableColor {
+    background-color: #ad7342;
+    pointer-events:none;
+}

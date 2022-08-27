@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ping pong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Poppins&family=Roboto+Slab:wght@300;400;900&family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>Ping Pong</h1>
+    <section class="imgspan">
+        <img src="img/pingpongbat.jpg" alt="">
+        <span>ping pong score keeper</span>
+    </section>
+
+    <section class="btnContainer">
+        <div>
+            <span id="p1span">0</span>
+            <span>to</span>
+            <span id="p2span">0</span>
+        </div>
+        <div>
+            <span>use the buttons below to keep score</span> 
+        </div>
+        <div>
+            <span>playing to</span>
+            <span>
+                <select name="setPlaying" id="setPlaying">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </span>
+        </div>
+        <div id="btn">
+            <button class="button">+1Player One</button>
+            <button class="button">+1Player Two</button>
+            <button class="button">Reset</button>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
