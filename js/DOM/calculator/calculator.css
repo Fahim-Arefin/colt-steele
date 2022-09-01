@@ -1,0 +1,83 @@
+h1{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+#calculator{
+    width: 35%;
+    height: 350px;
+    /* background-color:blueviolet; */
+    box-sizing: border-box;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.divition{
+    /* background-color:#ffe1a8; */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+button{
+    width: 30%;
+    height: 45px;
+    margin: 4px 4px;
+    font-size: 23px;
+    font-family: 'railway';
+}
+button:hover{
+    cursor: pointer;
+}
+input{
+    font-family: 'railway';
+    width: 100%;
+    height: 20%;
+    box-sizing: border-box;
+    /* background-color: #212529; */
+    background-color: #081c15;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    border: none;
+}
+#left{
+    width: 75%;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#right{
+    width: 22%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+#right button{
+    width: 100%;
+}
+#right button:last-child{
+    height: 78%;
+}
+#ac{
+    background-color:#c1121f ;
+}
+#ac:hover{
+    background-color:#a91f28 ;
+}
+#ac:active{
+    background-color:#921f26 ;
+}
+#equal{
+    background-color: #0066ff;
+}
+#equal:hover{
+    background-color: #1a66d9;
+}
+#equal:active{
+    background-color: #275fb3;
+}

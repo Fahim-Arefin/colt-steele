@@ -1,0 +1,6 @@
+h1{
+    text-decoration: underline;
+}
+body{
+    transition: 1s background-color;
+}

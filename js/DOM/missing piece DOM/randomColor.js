@@ -22,6 +22,9 @@ btn.addEventListener('click',()=>{
     let h1 = document.querySelector('.heading h1')
     h1.insertAdjacentElement('afterend',h2)
 
+    // let div  =document.querySelector('.heading')
+    // div.append(h2)
+
     document.body.style.backgroundColor=`rgb(${r},${g},${b})`
     
 })
