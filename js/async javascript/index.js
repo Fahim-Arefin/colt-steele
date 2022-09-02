@@ -224,4 +224,258 @@
 //         console.log('erorr!! connection timeout :(')
 //     })
 
-    //=============================================================================
+//=============================================================================
+
+//try-03
+//using promises no nest just return value 
+//we will use it from now on
+
+// const fakeRequestPromises = (url) => {
+//     return new Promise((resolved, reject) => {
+//         let delay = Math.floor(Math.random() * 4500) + 500;
+//         setTimeout(() => {
+//             if (delay > 4000) {
+//                 // console.log(`time taken = ${delay} seconds`)
+//                 reject('connenction failure!! :)')
+//             } else {
+//                 // console.log(`time taken = ${delay} seconds`)
+//                 resolved(`here is your fake data ${url}`)
+//             }
+//         }, delay)
+//     })
+// }
+
+
+// //without perameter
+// // fakeRequestPromises('kaggle.com/home')
+// // .then(()=>{
+// //     console.log('it worked !! home page')
+// //     return fakeRequestPromises('kaggle.com/home/dataset')
+// // })
+// // .then(()=>{
+// //     console.log('it worked !! dataset')
+// //     return fakeRequestPromises('kaggle.com/home/dataset/fertilizerSuggession')
+// // })
+// // .then(()=>{
+// //     console.log('it worked !! fertilizerSuggession')
+// // })
+// // .catch(()=>{
+// //     console.log('oppss!! not worked !!')
+// // })
+
+
+// //with perameter
+// // fakeRequestPromises('kaggle.com/home')
+// // .then((data)=>{
+// //     console.log('it worked !! home page')
+// //     console.log(data)
+// //     return fakeRequestPromises('kaggle.com/home/dataset')
+// // })
+// // .then((data)=>{
+// //     console.log('it worked !! dataset')
+// //     console.log(data)
+// //     return fakeRequestPromises('kaggle.com/home/dataset/fertilizerSuggession')
+// // })
+// // .then((data)=>{
+// //     console.log('it worked !! fertilizerSuggession')
+// //     console.log(data)
+// // })
+// // .catch((data)=>{
+// //     console.log('oppss!! not worked !!')
+// //     console.log(data)
+// // })
+
+
+//----------------------------------------------------------------------------------------------
+
+
+//creating own promises
+//whenever resolve and rejected called promise will return to then() and catch() accordingly
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//intro to promise
+
+// const createFakePromises = (color,delay)=>{
+//         return new Promise((resolved,rejected)=>{
+//             rejected()
+//         })
+// }
+// createFakePromises(1,2)
+// .then(()=>{
+//     console.log('resolved')
+// })
+// .catch(()=>{
+//     console.log('rejected')
+// })
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+//so now create our own promise
+// const colorDelay = (color,delay)=>{
+//     return new Promise((resolve,rejected)=>{
+//         setTimeout(()=>{
+//             document.body.style.backgroundColor = color
+//             resolve()
+//         },delay)
+//     })
+// }
+
+// // colorDelay('red',1000)
+// // .then(()=>{
+// //     return colorDelay('green',1000)
+// // })
+// // .then(()=>{
+// //     return colorDelay('purple',1000)
+// // })
+// // .then(()=>{
+// //     return colorDelay('teal',1000)
+// // })
+// // .then(()=>{
+// //     return colorDelay('pink',1000)
+// // })
+// // .then(()=>{
+// //     console.log('Done!!')
+// // })
+// // .catch(()=>{
+// //     console.log('here no rejection so i will not called a single time')
+// // })
+
+// //or return shorthand
+// colorDelay('red',1000)
+// .then(()=> colorDelay('green',1000))
+// .then(()=> colorDelay('teal',1000))
+// .then(()=> colorDelay('yellow',1000))
+// .then(()=> colorDelay('blue',1000))
+// .then(()=> colorDelay('pink',1000))
+// .then(()=>{
+//     console.log('done!')
+// })
+// .catch(()=>{
+//     console.log('here no rejection so i will not called a single time')
+// })
+
+
+//-----------------------------------------------------------------------------------------------
+
+
+//async keyword
+//async function autometically return promises 
+//if we return something it is resolved and if we throw it is rejected
+
+
+// intro 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// const demo1 = async function(){
+//     return 'hello!'
+// }
+// const demo2 = async function(){
+//     throw 'error!'
+// }
+
+// demo1()
+// .then((data)=>{
+//     console.log('inside catch')
+//     console.log(data)
+// })
+
+// demo2()
+// .catch((data)=>{
+//     console.log('inside then')
+//     console.log(data)
+// })
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//async function example
+//only password checking
+// const login = async (username,password)=>{
+//     if(!username || !password){
+//         throw 'perameter missing' //code will go to catch() from here directly
+//     }
+//     if(password==='cr7'){
+//         return 'welcome !!' //code will go to then() from here directly
+//     }
+//     throw 'invalid password' //code will go to catch() from here directly
+// }
+
+// login('fahim','cr7')
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((data)=>{
+//     console.log(data);
+// })
+
+//----------------------------------------------------------------------------------------------
+
+
+//await keyword
+//example-01
+
+// const colorDelay = (color,delay)=>{
+//     return new Promise((resolve,rejected)=>{
+//         setTimeout(()=>{
+//             document.body.style.backgroundColor = color
+//             resolve()
+//         },delay)
+//     })
+// }
+
+// //improving then() and replacing with await keyword 
+// const awaitDemo = async ()=>{
+//     await colorDelay('red',1000)
+//     await colorDelay('green',1000)
+//     await colorDelay('blue',1000)
+//     await colorDelay('teal',1000)
+//     await colorDelay('pink',1000)
+//     return 'done!!'
+// }
+
+// // awitDemo()
+// // .then((data)=>{
+// //     console.log(data)
+// // })
+// //or
+// const print = async ()=>{
+//     let data= await awaitDemo()
+//     console.log('print after await is done');
+//     console.log(data);
+// }
+// print()
+
+//==================================================================
+
+//example-02
+
+const fakeRequestPromises = (url) => {
+    return new Promise((resolved, reject) => {
+        let delay = Math.floor(Math.random() * 4500) + 500;
+        setTimeout(() => {
+            if (delay > 4000) {
+                // console.log(`time taken = ${delay} seconds`)
+                reject('connenction failure!! :)')
+            } else {
+                // console.log(`time taken = ${delay} seconds`)
+                resolved(`here is your fake data ${url}`)
+            }
+        }, delay)
+    })
+}
+
+const awaitDemo02 = async () => {
+    try {
+        let data01 = await fakeRequestPromises('facebook.com/home')
+        console.log(data01);
+        let data02 = await fakeRequestPromises('facebook.com/home/profile')
+        console.log(data02);
+        let data03 = await fakeRequestPromises('facebook.com/home/profile/picture')
+        console.log(data03);
+
+    } catch (e) {
+
+        console.log('Erorr !!! ');
+        console.log(e);
+    }
+}
+awaitDemo02()
