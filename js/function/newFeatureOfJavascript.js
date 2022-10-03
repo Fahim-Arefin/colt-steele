@@ -73,7 +73,7 @@ const books ={
 const bookAndMovies ={...movies,...books,rating:7} 
 console.log(bookAndMovies)
 
-let sampleArray = [1,2,3,4,5,6,7,8,9]
+let sampleArray = [1,2,3,4,5,6,7,'fahim',9]
 let objArray={...sampleArray}
 console.log(objArray)
 
@@ -100,7 +100,10 @@ function raceList(gold,silver,...restOfthePerticipant){
     console.log(`Thanx Everyone for perticipate to race - ${restOfthePerticipant}`);
 }
 
-raceList('Fahim','tanjim','hasin','sagor','abir','hridoy')
+// raceList('Fahim','tanjim','hasin','sagor','abir','hridoy')
+
+let racePerticipates = ['Fahim','tanjim','hasin','sagor','abir','hridoy']
+raceList(...racePerticipates)
 
 
 //------------------------------------------------------------------------------------------

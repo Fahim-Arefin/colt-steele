@@ -1,0 +1,14 @@
+h1{
+    color: brown;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+div{
+    /* background-color:blueviolet; */
+    width: 20%;
+    height: 300px;
+    margin: 20px;
+}

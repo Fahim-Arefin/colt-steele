@@ -2,7 +2,7 @@
 // setTimeout(()=>{
 //     console.log('I print after 5 second')
 // },5000)
-// console.log('I print last')
+// console.log('I print second')
 
 //--------------------------------------------------------------------------------
 
@@ -394,7 +394,7 @@
 //         throw 'perameter missing' //code will go to catch() from here directly
 //     }
 //     if(password==='cr7'){
-//         return 'welcome !!' //code will go to then() from here directly
+//         return `Welcome ${username}!!!` //code will go to then() from here directly
 //     }
 //     throw 'invalid password' //code will go to catch() from here directly
 // }
@@ -463,19 +463,29 @@ const fakeRequestPromises = (url) => {
     })
 }
 
-const awaitDemo02 = async () => {
+
+const awaitDemo2 = async () => {
     try {
-        let data01 = await fakeRequestPromises('facebook.com/home')
-        console.log(data01);
-        let data02 = await fakeRequestPromises('facebook.com/home/profile')
-        console.log(data02);
-        let data03 = await fakeRequestPromises('facebook.com/home/profile/picture')
-        console.log(data03);
-
-    } catch (e) {
-
-        console.log('Erorr !!! ');
-        console.log(e);
+        let data
+        data = await fakeRequestPromises('facebook.com')
+        console.log(data)
+        data = await fakeRequestPromises('facebook.com/profile')
+        console.log(data)
+        data = await fakeRequestPromises('facebook.com/profile/setting')
+        console.log(data)
+        data = await fakeRequestPromises('facebook.com/profile/setting/account')
+        console.log(data)
+        return 'successfull data store'
+    }catch(e){
+        console.log(e)
+        throw 'unsuccessfull transfer data'
     }
-}
-awaitDemo02()
+} 
+
+awaitDemo2()
+.then((data)=>{
+    console.log(data);
+})
+.catch((data)=>{
+    console.log(data);
+})
