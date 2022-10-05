@@ -1,0 +1,18 @@
+1.we have to install a package through bash ---> 'nmp install package_name'
+	package ta locally download hbe.jei folder e achi oikhan thekei use kora jabe only.
+
+2.npmjs.com/package theke package pabo
+
+3.package install korar shathe shathe 'node_module' folder downlaod hobe & 2ta json file o download hbe
+  	eigula te kono edit kora jabe na.
+
+4.now ekhn js file theke ei package use kora jabe 'require('package_name')' eivabe.
+
+5.js file ta same directory te thaka lagbe jekhane 'node_module' folder & other json file ache.
+
+6.require korar por eibar website theke(jekhan theke install korsi oikhanei shb documentation ache) 
+	package documentation pore pore methods use korbo.oikhaner Usage theke kivabe use kora lage dekhbo
+
+7.multiple package same folder e namano jabe.shob package gula 'node_module' eikhane store hbe after installing.
+
+8.we can download a package globally by 'nmp install -g package_name'
