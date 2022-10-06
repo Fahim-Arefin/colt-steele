@@ -3,7 +3,7 @@
 // }
 //--------------------------------------------------------
 console.log(process.cwd())
-console.log(process.argv)
+console.log(process.argv) //takes input from bash 
 
 
 const args = process.argv.slice(2)
