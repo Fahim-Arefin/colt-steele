@@ -22,7 +22,7 @@ app.get('/dogs',(req,res)=>{                    //exactly matches with homepage/
     res.send('WOOF!!')
 })
 
-app.post('/settings/profile',(req,res)=>{                    //exactly matches with homepage/dogs
+app.post('/settings/profile',(req,res)=>{                    //exactly matches with homepage/settings/profile
     res.send('Your Profile')
 })
 

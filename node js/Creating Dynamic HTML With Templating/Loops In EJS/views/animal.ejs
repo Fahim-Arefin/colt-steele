@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= animalName %> </title>
+</head>
+<body>
+    <%if(animalName==='cats'|| animalName==='dogs'){%>
+        <h1>This is <%= animalName %>  section</h1>
+    <%}%> 
+    <ul>
+        <% if(animalName==='cats'){
+            for(let cat of cats){    %>
+                <li><%= cat %> </li>
+        <%  }
+        }else if(animalName==='dogs'){
+           for(let dog of dogs){ %>
+                <li><%= dog %> </li>
+        <% }
+        }else{ %>
+            <li><%=errorMessage %></li>
+        <%}%>
+    </ul>
+</body>
+</html>
