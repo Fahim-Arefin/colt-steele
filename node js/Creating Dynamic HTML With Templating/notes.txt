@@ -38,3 +38,14 @@ _%> ‘Whitespace Slurping’ ending tag, removes all whitespace after it
    so we can write logic (if,else,loop,etc..) and then use '<%= %>' to add it into ejs file/template.
    it works just like php open and close whenever need inside html.
 
+-- <%- %>
+   including a file to other file 
+   header,footer,navbar etc ekta jaygay create kore rekhe just shb page 
+   a include kore dibo.
+   include korar jonno ei syntax use hoy
+
+
+
+//bootstrap + express vid ta dekha hoyni, bootstrap shikhar por must match ei vid ta
+
+
