@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All comments</title>
+</head>
+<body>
+    <h1>All Comments</h1>
+    <ul>
+        <% for (let c of comments) {%> 
+                <li><%= c.comment %> - <b><%= c.username %></b> <a href="/comments/<%= c.id %>">details</a></li>
+        <% } %> 
+    </ul>
+
+    <section>
+        <!-- provide url in href not folder name -->
+        <a href="/comments/new">Make new Comment</a>       
+    </section>
+</body>
+</html>

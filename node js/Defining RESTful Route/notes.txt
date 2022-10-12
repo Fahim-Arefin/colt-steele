@@ -1,0 +1,9 @@
+-- In Creating Restfull Routes section we create a restfull server architechture.
+
+Restfull server architechture Overview:
+----------------------------------------
+GET/comments  		- list all comments
+POST/comments  		- Create a new comments
+GET/comments/:id	- Get one comments (using ID)
+PATCH/comments/:id	- Update one comment
+DELETE/comments/:id	- Destroy one comments

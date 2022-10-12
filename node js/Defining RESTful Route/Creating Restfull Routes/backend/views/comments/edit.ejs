@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit section</h1>
+    <h2>hello <%= targetComment.username %> </h2>
+
+    <!-- 
+        step01: eikhane first e method ta post korte hobe 
+        step02: action er last e query string 
+                 akare methodOverride e set kora name ('_method') eikhane provide kora lagbe
+                 (app.use(methodOverride('_method'))) ->>>> '_method'
+        step03: query string er value patch korte hobe 
+                 basically first it will be treated post method but after the query string addition
+                 express will identify it as a patch and activate patch request
+     -->
+    <form method="post" action="/comments/<%= targetComment.id %>?_method=patch ">   
+        
+        <textarea name="newComment" id="newComment" cols="30" rows="10">
+            <%= targetComment.comment  %> 
+        </textarea>
+        <button>save</button>
+    </form>
+</body>
+</html>
+

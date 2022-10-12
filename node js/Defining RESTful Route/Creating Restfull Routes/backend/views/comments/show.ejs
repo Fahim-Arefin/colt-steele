@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Show one result which is selected</h1>
+        <hr>
+        <h2>commentor id: <%= targetComment.id %> </h2>
+        <p> <b>comment :</b>  <%= targetComment.comment %> </p>
+        <p> <b>username :</b> - <%= targetComment.username %> </p>
+    </section>
+    <section>
+        <a href="/comments">go back</a>
+    </section>
+    <section>
+        <a href="/comments/<%= targetComment.id %>/edit">edit</a>
+    </section>
+    <form method="post" action="/comments/<%= targetComment.id %>?_method=delete">
+        <button>delete</button>
+    </form>
+    
+</body>
+</html>
