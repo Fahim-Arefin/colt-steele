@@ -1,0 +1,120 @@
+				mongodb
+------------------------------------------------------------------------
+step01: install it. (4.4 is installed and path variable updated)
+step02: open powershell type 'mongod' to open database server 
+step03: then open another powershell and use mongo shell by typing 'mongo'
+
+-- mongodb use BSON (Binary JSON) bcz JSON is not memory efficient and also BSON support more data types that json like 'date' type etc.
+   we write JSON but mongodb converts it into BSON and store it to database
+-- mongo is a shell , its like REPL , we can write js inside this REPL
+-- we go to this REPL by typing 'mongo' and get out of it by typing 'exit' or ctrl+c
+-- we perform database CRUD and other thing inside this REPL (mongo shell)
+
+
+
+-- go to mongodb.com then resource --> server --> select 4.4 version(in this tutorial we learn it) --> mongoDB CRUD operations 
+-- we focus mongoDB CRUD operations, so read this doc
+-- also go to reference --> operator --> query section and check them also
+
+
+Database commands (all commands written in mongo shell) :
+----------------------------------------------------------------------------------------------------------------------
+
+1. 'show dbs'    --->  	 		shows us all database name.
+2. 'db'   ---> 		 		shows us which database i m in.
+3. 'use databaseName' 	---> 		create a database also switch to that database
+					if database is already exist the 'use' command is used for switching to that database
+					if database is not exist 'use' command then create that database and switch to that database	
+
+4. insert into database:
+					
+   db.collection.insertOne() --> takes a object
+   db.collection.insertMany() --> takes a array with multiple object
+   db.collection.insert() --> we can perform both one and many with this
+
+
+5. show collections  --> show all collections (like table in mysql)
+6. db.collection.find()  --> show all result withing this collection
+
+
+
+example :
+	db.dogs.insertOne({name:"mike",age:14,breed:"bulldog",catfriendly:false})
+	db.dogs.insertMany([{name:"jorge",age:4,breed:"golden retriver",catfriendly:true},{name:"tyson",age:2,breed:"unknown",catfriendly:true}])
+
+	db.dog.find()
+
+	db.cats.insert([{name:'tommy',age:2,breed:'pursiun',dogfriendly:true},{name:'kallu',age:11,dogfriendly:false}])   -->  we can insert anything dont need to be consistant.
+															       if any parameter is missing thats fine.
+															       its the beauty of noSQL database.
+	db.cats.find()	
+	show collections																	
+	
+7. db.dogs.find({age:22})      ---> it return a curser and that curser is iterable to all matched object
+
+8. db.dogs.findOne({catfriendly:true})   ---> return only one matched object even if there is multiple matched
+
+
+
+
+9. db.dogs.updateOne({name:'charlie'},{$set:{age:3}})  ----> update one, first parameter is the finding element second parameter is the update value of that eliment
+		     ----------------
+		     	     ^
+			     |
+			searched key
+
+10. db.dogs.updateOne({name:'charlie'},{$set:{age:3,breed:'unknown'}})  ---> we can update multiple property of that one selected element
+
+11. db.dogs.updateOne({name:'charlie'},{$set:{color:'black'}})  --> if there is no 'color' property it will be created and added
+
+//we use updateOne with unique search key so that one element can select and update that's property
+
+
+12. db.dogs.updateMany({catfriendly:true},{$set:{isAvailable:true}})  --> generally searched key have multiple result and we then set something to all of that matched property
+			-----------------
+				^
+				|
+			   searched key
+
+13. db.dogs.updateOne({name:'charlie'},{$set:{age:8},$currentDate:{lastChanged:true}}) --->  we can use multiple operation like set,currentDate etc....
+
+
+14. db.dogs.deleteOne({name:'charlie'})
+
+15. db.dogs.deleteMany({isAvailable:true})
+
+16. db.dogs.deleteMany({})   ---> delete all in a collections
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+17. db.dogs.find({'personality.catFriendly':true})   --> if we have obj within obj we can access them this way
+
+18. db.dogs.find({'personality.catFriendly':false,age:16})    
+
+19. db.dogs.find({age:{$gt:11}})
+
+20. db.dogs.find({age:{$gte:11}})
+
+21. 20. db.dogs.find({age:{$lt:11}})
+
+22. db.dogs.find({breed:{$in:['cargo','american']}})  ---> ei property jar jar moddhe ache shb gula targeted hobe
+
+23. db.dogs.find({age:11,breed:'american'})
+
+24. db.dogs.find({breed:{$in:['cargo','american']},age:{$lt:12}})   ---> in and also age is lt 12
+
+25. db.dogs.find({breed:{$nin:['cargo','american']}})   ---> not in
+
+26. db.dogs.find({$or:[{'personality.catFriendly':true},{age:{$lt:7}}]})  ---> either catFriendly or age is below 7
+
+
+
+
+
+
+
+
+
+  
