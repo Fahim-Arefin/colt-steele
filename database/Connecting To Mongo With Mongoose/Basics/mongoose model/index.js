@@ -49,7 +49,7 @@ const newMovie = new Movie({
 })                
 
 //finally save it to database 
-newMovie.save()    //save can be done only once 
+newMovie.save()    //save can be done only once , it returns a promise / it takes time to save() to have to await/wait to resolve the promise 
 
 /*
     step01 : run mongod from powershel
