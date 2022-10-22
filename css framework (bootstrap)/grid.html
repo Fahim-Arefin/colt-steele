@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <h1 class="display-1 text-primary">Grid Basics</h1>
+        <div class="row mb-4">
+            <!-- a row has total 12 columns-->
+            <div class="col-2 bg-success">
+                I am 2 units
+            </div>
+            <div class="col-8 bg-warning">
+                I am 8 units
+            </div>
+            <div class="col-2 bg-danger">
+                I am 2 units
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <!-- a row has total 12 columns-->
+            <div class="col-2 bg-danger">
+                I am 2 units
+            </div>
+            <div class="col-4 bg-success">
+                I am 4 units
+            </div>
+            <div class="col-3 bg-danger">
+                I am 3 units
+            </div>
+            <!-- remaining (2+4+3=9 12-9=4) 4 units will be blank  -->
+        </div>
+
+        <div class="row mb-4">
+            <!-- a row has total 12 columns-->
+            <div class="col-3 bg-warning">
+                I am 2 units
+            </div>
+            <div class="col-5 bg-secondary">
+                I am 4 units
+            </div>
+            <div class="col-5 bg-primary">
+                I am 3 units
+            </div>
+            <!-- if col is not fit in row then it will go to next row (wraping on if col exceed) -->
+        </div>
+
+
+        <div class="row mb-4">
+            <!-- a row has total 12 columns-->
+
+            <!-- all col will take equal space -->
+            <div class="col bg-warning">
+                I am auto sized
+            </div>
+            <div class="col bg-primary">
+                I am auto sized
+            </div>
+            <div class="col bg-secondary">
+                I am auto sized
+            </div>
+            <div class="col bg-info">
+                I am auto sized
+            </div>
+        </div>
+
+
+        <div class="container row mb-4">
+            <!-- container within container-->
+
+            <!-- here col-4 takes 4 units and remaining will take equal size of left over space -->
+            <div class="col bg-warning">
+                I am auto sized
+            </div>
+            <div class="col bg-primary">
+                I am auto sized
+            </div>
+            <div class="col bg-secondary">
+                I am auto sized
+            </div>
+            <div class="col-4 bg-danger">
+                I am 4 units
+            </div>
+            <div class="col bg-info">
+                I am auto sized
+            </div>
+        </div>
+
+
+        <!-- responsive grid -->
+        <!-- col-md-6  -> mid porjonto default (stack) thakbe mid point hit korle 6 ta column nibe -->
+        <!-- col-xl-3  -> xl point hit korle 3 ta column nibe -->
+        <div class="row mb-4">
+            <h1 class="text-primary display-2">Responsive Grid</h1>
+            <div class="col-md-6 col-xl-3 bg-primary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 bg-danger">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 bg-secondary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 bg-success">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+        </div>
+
+
+        <!--  Vertical alignment -->
+        <div class="row mb-4 align-items-center">
+            <h1 class="text-primary display-2">Vertical alignment</h1>
+            <div class="col-md-6 col-xl-3 bg-primary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 bg-danger">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Ad maxime, excepturi eaque error perspiciatis ipsam in dolor sint beatae placeat voluptas
+                    dolorum dicta! Ut, repellat labore neque tempore aut quia Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Delectus explicabo vero sapiente eos culpa architecto laboriosam totam expedita,
+                    laborum, sit consequuntur perspiciatis rem maiores ipsam provident tempora iure, nobis ipsum!.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 bg-secondary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto as.
+                </p>
+            </div>
+            <div class="col-md-6 col-xl-3 align-self-end bg-success">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+        </div>
+
+
+        <!--  Horizontal  alignment -->
+        <div class="row mb-4 justify-content-between">
+            <h1 class="text-primary display-2">Horizontal alignment</h1>
+            <div class="col-3 bg-primary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+          
+            <div class="col-3 bg-success">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+        </div>
+
+        <!--  Horizontal alignment with Responsive variations-->
+        <div class="row mb-4 border justify-content-center justify-content-lg-start justify-content-xl-end"> <!-- first center then start(lg) then end(xl)-->
+            <h1 class="text-primary display-2">Utilities -> Flex</h1>
+            <div class="col-3 bg-primary">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+          
+            <div class="col-3 bg-success">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui cupiditate laborum numquam
+                    voluptates ullam architecto similique dignissimos consectetur cumque iure. Minima blanditiis
+                    distinctio eius earum fugit iusto quidem quas.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- Responsive image -->
+        <div class="row mb-4 ">
+            <h1 class="display-2 text-primary">Responsive image</h1>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="image/4.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="image/3.jpg" alt="">
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="image/2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
