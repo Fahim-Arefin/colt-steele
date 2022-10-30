@@ -19,6 +19,17 @@ console.log(multiplication(2))
 
 //-----------------------------------------------------------------------------------
 
+function sum(x,y,z){    //unpack the array now can see elements
+    // console.log(x+y+z)       //not working like this have to return it 
+    return x+y+z
+}
+
+let sumationArray = [2,11,58,10]
+// sum(...sumationArray)
+console.log(sum(...sumationArray))
+
+
+
 let max = Math.max(1, 22, 23, 44, 111, 4, 2, 0, 2, -54)
 console.log(`Maximum = ${max}`)
 
@@ -107,14 +118,39 @@ raceList(...racePerticipates)
 
 
 //------------------------------------------------------------------------------------------
-
+//deconstruction
 
 const list =['Fahim','tanjim','hasin','sagor','abir','hridoy']
+
+const runner = {
+    firstName: 'fahim',
+    lastName: 'arefin',
+    country: 'BD'
+}
+
+//array deconstructing
 let [gold,silver,...rest] = list
 console.log(`Gold medel goes to - ${gold}`);
 console.log(`Silver medel goes to - ${silver}`);
 console.log(`Thanx Everyone for perticipate to race - ${rest}`);
 
+
+//obj deconstructing
+const {firstName,country} = runner  //same name 
+console.log(firstName)
+console.log(country)
+
+
+// const fullNAme = (runner)=>{
+//     console.log(`full name : ${runner.firstName} ${runner.lastName}`)
+// }
+// fullNAme(runner)
+
+
+const fullNAme = ({firstName,lastName})=>{  
+    console.log(`full name : ${firstName} ${lastName}`)
+}
+fullNAme(runner)
 
 
 //------------------------------------------------------------------------------------------
