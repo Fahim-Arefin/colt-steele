@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-primary display-1 mb-4">Form practice</h1>
+        <div class="row align-items-center">
+            <div class="col-9">
+                <form action="#">
+                    <div class="row g-3">
+                        <!-- g-3 (gutter)-->
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="email">Email Address</label>
+                            <input class="form-control" type="text" name="email" id="email"
+                                placeholder="name@gmail.com">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="pass">Password</label>
+                            <input class="form-control" type="password" name="pass" id="pass" placeholder="password">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="adress">Adress</label>
+                        <input class="form-control" type="text" name="adress" id="adress">
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="city">city</label>
+                            <input class="form-control" type="text" name="city" id="city">
+                        </div>
+
+                        <div class="mb-3 col-6 col-md-3">
+                            <!-- col-6 **** -->
+                            <label class="form-label" for="state">state</label>
+                            <select class="form-select" aria-label="Default select example" id="state" name="state">
+                                <option selected>bangladesh</option>
+                                <option value="1">pakistan</option>
+                                <option value="2">afganistan</option>
+                                <option value="3">srilanka</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3 col-6 col-md-3">
+                            <!-- col-6 **** -->
+                            <label class="form-label" for="zip">zip code</label>
+                            <input class="form-control" type="text" name="zip" id="zip">
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="sign" id="sign">
+                        <label class="form-check-label" for="sign">sign me up</label>
+                    </div>
+                    <button class="btn btn-success">submit</button>
+                </form>
+            </div>
+
+            <div class="col-3">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet facilis qui fugit vitae officiis aut
+                    pariatur placeat non architecto veniam, debitis, praesentium sint. Dolorem delectus vel mollitia
+                    totam, cupiditate dignissimos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
