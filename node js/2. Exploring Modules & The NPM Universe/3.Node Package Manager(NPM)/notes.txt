@@ -1,0 +1,74 @@
+------------------------------------------------------------------------------------------------------------
+//package install and how to use
+
+1.we have to install a package through bash ---> 'nmp install package_name' -> always download a package locally unless its required to be global
+	package ta locally download hbe.jei folder e achi oikhan thekei use kora jabe only.
+
+2.npmjs.com/package theke package pabo by searching in search bar 
+
+3.package install korar shathe shathe 'node_module' folder downlaod hobe & 
+	2ta json file(package.json & package-lock.json) o download hbe eigula te kono edit kora jabe na.
+
+4.now ekhn js file theke ei package use kora jabe 'require('package_name')' eivabe.
+
+5.js file ta same directory te thaka lagbe jekhane 'node_module' folder & other json file ache.
+
+6.require korar por eibar website theke(jekhan theke install korsi oikhanei shb documentation ache) 
+	package documentation pore pore methods use korbo.oikhaner Usage theke kivabe use kora lage dekhbo
+
+7.multiple package same folder e namano jabe.shob package gula 'node_module' eikhane store hbe after installing.
+
+8.we can download a package globally by 'nmp install -g package_name'	//but try to download locally if not mendatory to be global
+
+-------------------------------------------------------------------------------------------------------------
+
+//package.json
+
+-- we can create package.json then install npm libraries which will create node_module folder and downlaod package there.
+-- packet.json contails metadata of our projects
+-- most important thing is it contains dependencies.
+-- when we publish our code we do not share 'node_module' folder because its very heavy and takes so much space
+-- we provide package.json then node will check dependencies and install them one by one.
+-- dependencies also have package.json file.so it will then also install that dependancies and goes on...
+-- package.json file is like a tracker.what is used in our project whats the dependencies should install
+   it will make notes all of that.
+
+-------------------------------------------------------------------------------------------------------------
+
+//creating package.json
+
+-- 'npm init' used for creating package.json file(easy way to create it) -> write it in bash file
+-- package.json file er form fillup kora lagbe then enter dilei package.json file create hoyhe jabe
+-- now we can install any package through bash ---> 'nmp install package_name'
+-- package.json file er dependencies e newly create kora package er name & version boshe jabe
+-- so when we share this package.json file to others they can also install packages through package.json files dependencies
+-- suppose ekhn ami package figlet namabo
+-- 'npm i figlet' commend er maddhome package istall korbo
+-- 'node_module' package create hobe and oitar moddhe amar pacakge ta nambe & package.json er dependencies e figlet add hobe
+-- jokhn kono package dorkar lagbena tokhn chaile dependencies theke oi package er nam ta remove kore dite pari.
+	tahole jokhn ei package.json file ta onnoder shathe share korbo tara jeno ei file ta r na install kore. 
+	bcz ei package er name dependencies e nai.
+-- ekhn ei figlet package locally j kono js file theke require kora jabe
+-- package.json ta project er root directory te rakha lagbe
+
+-----------------------------------------------------------------------------------------------------------------
+
+//installing dependencies using package.json file
+
+step01: download code 
+step02: unzip and puts it in desire directpory
+step03: open bash and navigate to that directory
+step04: node write 'npm install'
+	it will check the package.json dependencies and install all dependent packages for us
+step05: now run the index.js file or main file 
+	run command 'node index.js'
+
+-----------------------------------------------------------------------------------------------------------------
+
+//language guesser challenge
+ 
+-- need two packages (franc & langs)
+-- install them
+-- then use methods
+
+*** code is not working ***
