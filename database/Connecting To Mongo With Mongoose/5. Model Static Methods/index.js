@@ -73,7 +73,7 @@ Product.fireSale()
 /*              notes 
 -------------------------------------------------------------------------------------------------------------------------------
 instance methods is used by every instance.   ---> 'new Product(....).save()'  ---> save() is a instance method 
-instance methods is used by only class.       ---> 'Product.find()'  -->  find() is a satic/class  method
+satic methods is used by only class.       ---> 'Product.find()'  -->  find() is a satic/class  method
 
 
 --create instance method like below way--

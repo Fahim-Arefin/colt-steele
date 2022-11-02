@@ -1,4 +1,4 @@
-//here we saw insert Many
+//here we will see find
 
 
 //this tis connection setup part
@@ -36,7 +36,7 @@ const Movie = mongoose.model('Movie',movieSchema)
 //     console.log(e)
 // })
 
-Movie.findById('634d2b0ab22241171bbbe584')         //very commonly used
+Movie.findById('6362b1910cd9ac62bdcfe361')         //very commonly used
 .then(data => console.log(data))
 .catch((e)=>{
     console.log(e)

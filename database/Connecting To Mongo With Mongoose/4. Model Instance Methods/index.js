@@ -53,8 +53,7 @@ const productSchema = new mongoose.Schema({
 
 //instance method
 productSchema.methods.greet = function(){       //here greet is a instance method which will be available to every instance
-    console.log('helloo')
-    console.log(`from - ${this.name}`)
+    console.log(`helloo from - ${this.name}`)
 }
 
 //instance method
@@ -65,16 +64,11 @@ productSchema.methods.toggleOnsale = function(){
                         //ultimately we have to await it somewhere
 }
 
+//instance method
 productSchema.methods.addCategory = function(newCategory){
     this.catagories.push(newCategory)
     return this.save()
 }
-
-
-
-
-
-
 
 const Product = mongoose.model('Product', productSchema)        
 
@@ -113,7 +107,7 @@ toggleOnsaleAndaddCategory()
 /*              notes 
 -------------------------------------------------------------------------------------------------------------------------------
 instance methods is used by every instance.   ---> 'new Product(....).save()'  ---> save() is a instance method 
-instance methods is used by only class.       ---> 'Product.find()'  -->  find() is a satic/class  method
+satic methods is used by only class.       ---> 'Product.find()'  -->  find() is a satic/class  method
 
 
 --create instance method like below way--

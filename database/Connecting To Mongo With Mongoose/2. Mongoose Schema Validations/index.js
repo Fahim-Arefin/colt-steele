@@ -1,4 +1,6 @@
 //validation mongoose schema
+
+//connection part
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/shopApp')
     .then((data) => {
@@ -10,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/shopApp')
         console.log(e)
     })
 
-
+//schema 
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -72,7 +74,7 @@ bike.save()
                                                                                    give error but it will not added or stored in
                                                                                    database. it will be ingored 
 
-2. this validations will work by default object creation time \
+2. this validations will work by default object creation time 
 3. if we update database these validation will not work by default
 4. then we have to tell explicitly that we want these validation also work with update time 
 */
