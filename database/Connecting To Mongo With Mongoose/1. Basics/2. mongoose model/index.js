@@ -37,7 +37,7 @@ const Movie = mongoose.model('Movie',movieSchema)   //returns a class which is s
                                                     //collection and also we always pass singular(without space) and first 
                                                     //letter should be capital ('Movie',movieSchema)
 
-//collection name = movies  'Movie' model converts into plural and lowercase 'movies' as a collection
+//collection name -> movies  'Movie' model converts into plural and lowercase 'movies' as a collection
 //db.movies.find()
                                                     
 //insert one movie
