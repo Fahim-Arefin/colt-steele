@@ -1,0 +1,14 @@
+			***express built in error handler***
+---------------------------------------------------------------------------------
+1. if any error is occured express build in  error handler give us 
+   In development environment 'http response' with error message and stack trace, 
+   In production environment we get 'http response with html format'
+   with a status code(500)
+2. generally in production environment if a error is thrown or mistakely a error 
+   occur express catch that error and give us 
+   http respond with some error message which is not client concern 
+   rather we show some error message like 'something went wrong' and also handle
+   different erorr differently.thats why we need to handle error customly.
+3. throw new Error('password error') ---> if we want to throw explicitly error  
+   we can write this way. it will give us respose by default with 
+   that message(password error) which is passed as a argument also with stack trace
