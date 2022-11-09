@@ -71,16 +71,15 @@ app.get('/products/:id', async (req, res, next) => {      //eita last e add kora
 
 // POST/products   --->   Create a new products 
 app.post('/products', async (req, res, next) => {
-    const { name, price, category } = req.body
-
-    const newlyCreatedProduct = {
-        name: name,
-        price: parseFloat(price), //parse na korleo automatic database validation e Number e cast hoiye jabe 
-        category: category
-    }
-    const product = new Product(newlyCreatedProduct)
-
     try {
+        const { name, price, category } = req.body
+        const newlyCreatedProduct = {
+            name: name,
+            price: parseFloat(price), //parse na korleo automatic database validation e Number e cast hoiye jabe 
+            category: category
+        }
+        const product = new Product(newlyCreatedProduct)
+
         await product.save()
         res.redirect(`/products/${product._id}`)   //get req by default
     } catch (e) {
@@ -97,11 +96,11 @@ app.get('/products/:id/edit', async (req, res, next) => {
         const foundProduct = await Product.findById(id)  //find one product
         if (!foundProduct) {
             throw new AppError('product not found', 404)    //this time we catch it in catch section
-                                                            //then pass it to next(e) next 
-                                                            //err handler middleware 
+            //then pass it to next(e) next 
+            //err handler middleware 
         }
         res.render('products/edit', { foundProduct })
-    }catch(e){  //here mongoose error will be caught also my explicit error also caught
+    } catch (e) {  //here mongoose error will be caught and also my explicit error will caught
         next(e)
     }
 })
@@ -200,4 +199,5 @@ execute seeds.js (node seeds.js) before runnig index.js to seed database with in
         }else{
             res.render('products/show',{oneProduct})
         }
+    --> use try catch then inside catch we pass err to next err handler middleware    
 */
