@@ -78,7 +78,7 @@ const Product = mongoose.model('Product', productSchema)
 
 const findProduct = async ()=>{
     try{
-        const foundProduct = await Product.findOne({name:'road-bike'})  //findOne return promisses
+        const foundProduct = await Product.findOne({name:'mountain bike'})  //findOne return promisses
         foundProduct.greet()
     }catch(e){
         console.log('could not found')
@@ -86,11 +86,17 @@ const findProduct = async ()=>{
     }
 }
 findProduct()
+.then((data)=>{
+    console.log('done findProduct')
+})
+.catch((e)=>{
+    console.log
+})
 
 
 const toggleOnsaleAndaddCategory = async ()=>{
     try{
-        const foundProduct = await Product.findOne({name:'road-bike'})  //findOne return promisses
+        const foundProduct = await Product.findOne({name:'mountain bike'})  //findOne return promisses
         console.log(foundProduct)
         await foundProduct.toggleOnsale()
         console.log(foundProduct)
@@ -102,7 +108,12 @@ const toggleOnsaleAndaddCategory = async ()=>{
     }
 }
 toggleOnsaleAndaddCategory()
-
+.then((data)=>{
+    console.log('done toggleOnsaleAndaddCategory')
+})
+.catch((e)=>{
+    console.log('error!!')
+})
 
 /*              notes 
 -------------------------------------------------------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const app = express()
 
 app.listen(8001,()=>{
-    console.log('Server started at Port 80: ')
+    console.log('Server started at Port 8001: ')
 })
 
 //midleware

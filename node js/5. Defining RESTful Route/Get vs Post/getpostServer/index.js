@@ -49,6 +49,6 @@ app.post('/tacos',(req,res)=>{
 
  -- get req send korar time e params e name value set kore pathabo
  -- post req send korar time e 
-    form --> body te name ,value set kore pathabo
+    form --> x-www-form-urlencoded te name ,value set kore pathabo
     json --> obj create kore pathabo. (raw select kore json formet e click kore tarpor obj pathabo)
 */

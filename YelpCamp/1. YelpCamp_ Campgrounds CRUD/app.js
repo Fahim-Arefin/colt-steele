@@ -37,6 +37,7 @@ mongoose.connect('mongodb://localhost:27017/YelpCamp') //connected to YelpCamp d
 //index
 app.get('/campgrounds',async (req,res)=>{
     const campgrounds = await Campground.find({})
+    // console.log(campgrounds)
     res.render('campgrounds/index',{campgrounds})
 })
 

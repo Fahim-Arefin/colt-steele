@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------------------------
-//EJS (Embedded javascript template)
+//EJS (Embedded javascript)
 
 -- In ejs file we can create template.
 -- Basically it contains with html but also javascript language.

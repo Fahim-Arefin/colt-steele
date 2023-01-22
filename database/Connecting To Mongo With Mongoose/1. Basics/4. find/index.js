@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/movieApp')
 const movieSchema = new mongoose.Schema({
     title : String,  
     year : Number, 
-    scrore : Number, 
+    score : Number, 
     rating : String  
 })
 
@@ -30,13 +30,13 @@ const Movie = mongoose.model('Movie',movieSchema)
 
 // Movie.findOne({title:'interstellar'}).then(data => console.log(data))
 
-// Movie.find({year:{$lt:2012},scrore:{$gt:9.0}})
+// Movie.find({year:{$lt:2012},score:{$gt:9.0}})
 // .then(data => console.log(data))
 // .catch((e)=>{
 //     console.log(e)
 // })
 
-Movie.findById('6362b1910cd9ac62bdcfe361')         //very commonly used
+Movie.findById('63ca23bbe79a4ccc7dcc75c9')         //very commonly used
 .then(data => console.log(data))
 .catch((e)=>{
     console.log(e)

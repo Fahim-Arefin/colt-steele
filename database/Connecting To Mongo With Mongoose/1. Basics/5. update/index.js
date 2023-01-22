@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/movieApp')
 const movieSchema = new mongoose.Schema({
     title : String,  
     year : Number, 
-    scrore : Number, 
+    score : Number, 
     rating : String  
 })
 
@@ -27,7 +27,7 @@ const Movie = mongoose.model('Movie',movieSchema)
 //*** uncomment one by one and execute this file from bash ***
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Movie.updateOne({title:'robinhood'},{scrore:7.8,year:2010})
+// Movie.updateOne({title:'robinhood'},{score:7.8,year:2010})
 // .then((data)=>{
 //     console.log(data)
 // })
@@ -36,7 +36,7 @@ const Movie = mongoose.model('Movie',movieSchema)
 // })
 
 
-// Movie.updateMany({title:{$in:['interstellar','inception']}},{scrore:10})
+// Movie.updateMany({title:{$in:['interstellar','inception']}},{score:10})
 // .then((data)=>{
 //     console.log(data)
 // })
@@ -53,7 +53,7 @@ const Movie = mongoose.model('Movie',movieSchema)
 // })
 
 
-Movie.findOneAndUpdate({title:'iron-man'},{year:2000},{new:true})      //new:true will return updated obj
+Movie.findOneAndUpdate({title:'top gun'},{year:2000},{new:true})      //new:true will return updated obj
 .then((data)=>{
     console.log(data)  //return the updated obj
 })

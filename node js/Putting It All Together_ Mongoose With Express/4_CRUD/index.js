@@ -112,7 +112,7 @@ app.delete('/products/:id',async (req,res)=>{
                         Basic Steps:
 -----------------------------------------------------------------
 step01: npm init -y (json create)
-step02: npm i express ejs mongoose (install required things)
+step02: npm i express ejs mongoose mathod-override (install required things)
 step03: create views directory  
 step04: create index.js file  
 step05: required express mongoose mathod-override (ejs is not required)  

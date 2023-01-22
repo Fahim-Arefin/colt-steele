@@ -7,7 +7,7 @@ const path = require('path')
 const mongoose = require('mongoose')
 
 //connection with mongoose
-mongoose.connect('mongodb://localhost:27017/movies')
+mongoose.connect('mongodb://localhost:27017/farmStand')
 .then(()=>{
     console.log('Mongo connnection successful: ') 
 })

@@ -1,7 +1,7 @@
 //here we saw mongoose model 
 
 
-//this tis connection setup part
+//this is connection setup part
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/movieApp')
 .then(()=>{
@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost:27017/movieApp')
 {
     title : 'inception',  
     year : 2016, 
-    scrore : 9.2, 
+    score : 9.2, 
     rating : 'R'  
 }
 */
@@ -27,7 +27,7 @@ mongoose.connect('mongodb://localhost:27017/movieApp')
 const movieSchema = new mongoose.Schema({
     title : String,  
     year : Number, 
-    scrore : Number, 
+    score : Number, 
     rating : String  
 })
 
@@ -44,7 +44,7 @@ const Movie = mongoose.model('Movie',movieSchema)   //returns a class which is s
 const newMovie = new Movie({
     title : 'iron-man',  
     year : 2016, 
-    scrore : 8.9, 
+    score : 8.9, 
     rating : 'R'  
 })                
 

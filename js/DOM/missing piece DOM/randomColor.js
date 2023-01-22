@@ -8,13 +8,13 @@ btn.addEventListener('click',()=>{
     g = Math.floor(Math.random()*255)+1
     b = Math.floor(Math.random()*255)+1
     let h2
-    if(document.querySelectorAll('.heading h2').length==0){
+    if(!document.querySelector('h2')){  //if not created it will be null
         h2 = document.createElement('h2')
         h2.innerText=`rgb(${r},${g},${b})`
     }else{
-        h2 = document.querySelector('h2')
-        h2.remove()
-        h2 = document.createElement('h2')
+        h2 = document.querySelector('h2') 
+        // h2.remove()
+        // h2 = document.createElement('h2')
         h2.innerText=`rgb(${r},${g},${b})`
     }   
    

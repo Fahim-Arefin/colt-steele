@@ -98,16 +98,16 @@ const jokesAPI = async () => {
                 Accept: 'application/json'
             }
         }
-        let response = await axios.get('https://icanhazdadjoke.com/',header) //return promise
+        let response = await axios.get('https://icanhazdadjoke.com/', header) //return promise
         return response.data.joke
-    }catch{
+    } catch {
         return 'No jokes available'
     }
 }
 
 const btn = document.querySelector('button')
-btn.addEventListener('click',async()=>{
-    const ul = document.querySelector('section ul')
+btn.addEventListener('click', async () => {
+    const ul = document.querySelector('#dadJokes ul')
     const li = document.createElement('li')
     let joke = await jokesAPI()
     li.append(joke)
@@ -115,3 +115,62 @@ btn.addEventListener('click',async()=>{
 })
 
 
+//Jokes API v2
+// const axios = require("axios");
+
+// const options = {
+//   method: 'GET',
+//   url: 'https://jokeapi-v2.p.rapidapi.com/joke/Any',
+//   params: {
+//     format: 'json',
+//     contains: 'C%23',
+//     idRange: '0-150',
+//     blacklistFlags: 'nsfw,racist'
+//   },
+//   headers: {
+//     'X-RapidAPI-Key': 'a2cf8cc144msh110a5c8f9dccf78p19369ejsnb06269cfa00a',
+//     'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
+//   }
+// };
+
+// axios.request(options).then(function (response) {
+// 	console.log(response.data);
+// }).catch(function (error) {
+// 	console.error(error);
+// });
+
+//Jokes API v2
+const anotherJokes = async () => {
+    try {
+        const object = {
+            params: {
+                format: 'json',
+                idRange: '0-150',
+                blacklistFlags: 'nsfw,racist'
+            },
+            headers: {
+                'X-RapidAPI-Key': 'a2cf8cc144msh110a5c8f9dccf78p19369ejsnb06269cfa00a',
+                'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
+            }
+        }
+        let response = await axios.get('https://jokeapi-v2.p.rapidapi.com/joke/Any', object) //return promise
+        console.log(response)
+        return response
+    } catch (e) {
+        console.log(e)
+        throw "unsuccessull request"
+    }
+}
+const btn2 = document.querySelector('#jokes button')
+btn2.addEventListener('click', async () => {
+    const ul = document.querySelector('#jokes ul')
+    const li = document.createElement('li')
+    let anotherJoke = await anotherJokes()
+    if (!(anotherJoke.data.joke)) {
+        li.append(`${anotherJoke.data.setup}  ------> ${anotherJoke.data.delivery}`)
+    } else {
+        li.append(anotherJoke.data.joke)
+    }
+
+    ul.append(li)
+})

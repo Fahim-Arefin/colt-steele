@@ -1,7 +1,7 @@
 //here we saw insert Many
 
 
-//this tis connection setup part
+//this is connection setup part
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/movieApp')
 .then(()=>{
@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/movieApp')
 const movieSchema = new mongoose.Schema({
     title : String,  
     year : Number, 
-    scrore : Number, 
+    score : Number, 
     rating : String  
 })
 
