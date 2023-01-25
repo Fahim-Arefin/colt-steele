@@ -180,7 +180,7 @@ execute seeds.js (node seeds.js) before runnig index.js to seed database with in
     --> if we throw err from normal func it will work fine
     --> if we throw err from async func then we have to pass it to next() so that next error 
         handler middleware can run
-        'next(throw new AppError(....))'
+        'next(new AppError(....))'
 
 
     --> either return next() or write it inside if else...

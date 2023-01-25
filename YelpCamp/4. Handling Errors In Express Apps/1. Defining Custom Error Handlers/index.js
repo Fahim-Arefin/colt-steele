@@ -22,7 +22,12 @@ app.get('/', (req, res, next) => {
 
 app.get('/error', (req, res, next) => {
     console.log(`Request dateTime: ${req.dateTime}`)
-    throw new Error('Explicitly Thrown Erorr')
+    throw new Error('Explicitly Thrown Erorr')     
+})
+
+app.get('/secret', (req, res, next) => {
+    console.log(`Request dateTime: ${req.dateTime}`)
+    chicken.fly()   //chicken is undefined so it will throw error
 })
 
 app.get('/dog', (req, res, next) => {

@@ -1,0 +1,50 @@
+		   summary:
+		--------------
+
+* if any error occurs:
+	- error hanlder middleware activates
+	- if there is no error handler middleware then it passed to default error handler
+	- error handler should be written after all route 
+	- next(obj) activates next error handler 
+	- there can be multiple error handler
+	- we can chain them by next(object) call
+	- last error handler middleware's next(obj) call activates default error handler
+
+
+folder01:
+----------
+* we can throw a error by --> 'throw new Error('Explicitly Thrown Erorr')'
+  All Error may dont have status code on them
+
+folder02:
+----------
+* we can throw a error by --> 'throw new AppError('Explicitly Thrown Erorr',402)'
+  AppeError is a custom defined class. In this way we can generates custom status code 
+  and error message for all errors 
+
+
+folder03:
+----------
+* if we throw err from normal func it will work fine
+* if we throw err from async func it will not work.
+
+* try and catch should be added for aync func and in catch we pass error to 
+  error handler middleware by calling next(e) from catch func
+
+  next(new AppError('No product found', 404)) --> this will directly hit error handler middleware
+  throw new AppError('product not found', 404) --> we cant do this on async func
+						   we have to use try catch block
+						   then we can use it.
+					           it will first hit catch block then inside 
+						   catch we pass it to err handler middleware
+					  	   by calling next(e)
+
+
+folder04:
+----------
+* we saw we had to write try and catch block many times 
+* so we defined a func so that we do not need to write try catch all the time
+
+
+
+

@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate') %> <!-- automatic views folder theke search start korbe -->
+    <h1 class="text-center mb-4">Form To Create A Campground</h1>
+    <div class="row justify-content-center">
+        <div class="col-6 ">
+            <form action="/campgrounds" method="post">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="title">
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" name="location" placeholder="location">
+                </div>
+                <div class="mb-3">
+                    <label for="url" class="form-label">img-URL</label>
+                    <input type="text" class="form-control" id="url" name="url" placeholder="url">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price" name="price" placeholder="0.00">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            <a class="btn btn-primary my-3" href="/campgrounds">back</a>
+        </div>
+        
+    </div>
+    

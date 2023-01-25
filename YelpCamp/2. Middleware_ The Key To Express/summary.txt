@@ -1,0 +1,50 @@
+		code summary
+	       --------------
+folder01:
+----------
+* in this folder we saw a build in middleware which we just use for logger info
+
+
+folder02:
+----------
+* we can define our own middleware using app.use() fucntion.
+* we chain app.use((req,res,next)=>{}) with next() call at the end of this 'use' func.
+* we chain middleware by next() call at the end.
+* if we dont call this 'next()' no route will activate even if it is valid route
+
+folder03:
+----------
+* we saw another example. 
+* middleware should be written before route otherwise it wont work
+
+folder04:
+----------
+* we write a middleware at the end for 404 route 
+  if no route matched then it will activate
+
+* we can specify middleware for perticular route also. 
+	app.use('/dog',(req,res,next)=>{
+		-----
+	})
+  it will only activate if this('/dog') route is request. 
+  get,post,put... doest not matter any req method. 
+
+folder05:
+----------
+* we saw how to protect a route with 
+	1. any kind of request (get,post,put,delete...)
+	2. perticular request 	
+
+
+-----------------------------------------------------------------------------------------------
+next()		--> activates normal middleware 	 --> app.use((req,res,next)=>{})
+next(object)	--> activates error handling middleware  --> app.use((err,req,res,next)=>{})
+
+next(),next(obj) should be last at last line
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+

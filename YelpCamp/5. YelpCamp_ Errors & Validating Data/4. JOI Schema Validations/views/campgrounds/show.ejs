@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %> <!-- automatic views folder theke search start korbe -->
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card">
+                <img src="<%= specificCampground.image %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= specificCampground.title %></h5>
+                  <p class="card-text"><%= specificCampground.description%></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-muted"><%= specificCampground.location %></li>
+                  <li class="list-group-item">$<%= specificCampground.price %>/night</li>
+                </ul>
+                <div class="card-body">
+                    <a class="btn btn-info" href="/campgrounds/<%= specificCampground._id %>/edit">Edit</a>
+                    <form class="my-4 d-inline" action="/campgrounds/<%= specificCampground._id %>?_method=DELETE" method="post">
+                        <button class="btn btn-danger">delete</button>
+                    </form>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+
+    
