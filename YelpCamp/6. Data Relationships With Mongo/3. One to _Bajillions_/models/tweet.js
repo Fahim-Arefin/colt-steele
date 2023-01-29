@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
 const tweetSchema = new mongoose.Schema({
     text: String,
     like: Number,
-    user: [{ type: mongoose.Schema.Types.ObjectId, ref: 'TweetUser' }]
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'TweetUser' }
 })
 
 
