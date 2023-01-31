@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= foundProduct.name %> </title>
+</head>
+<body>
+    <h1>Fill Up Product Info</h1>
+    <form action="/products/<%=foundProduct._id%>?_method=PATCH" method="post">
+        <p>
+            <label for="name">name: </label>
+            <input type="text" name="name" id="name" value="<%= foundProduct.name %> ">
+        </p>
+
+        <p>
+            <label for="price">price: </label>
+            <input type="text" name="price" id="price" value="<%= foundProduct.price %> ">
+        </p>
+
+        <p>
+            <label for="category">select category: </label>
+            <select name="category" id="category">
+                <option value="fruit" <%= foundProduct.category==='fruit'? 'selected' : '' %> >fruit</option>
+                <option value="vegetable" <%= foundProduct.category==='vegetable' ? 'selected' : '' %> >vegetable</option>
+                <option value="dairy" <%= foundProduct.category==='dairy' ? 'selected' : '' %> >dairy</option>
+            </select>
+        </p>
+        <p>
+            <button>submit</button>
+        </p>
+        <p>
+            <a href="/products/<%= foundProduct._id %> ">Cancel</a>
+        </p>
+    </form>
+</body>
+</html>
