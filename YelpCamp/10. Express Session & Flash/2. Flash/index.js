@@ -35,7 +35,7 @@ app.use(methodOverride('_method'))
 sessionOptions ={
     secret:'thisisnotagoodsecret',  //secret just like cookies
     resave:false,                   //for remove warning
-    saveUninitialized:false         //for remove warning
+    saveUninitialized:true         //for remove warning
 }
 app.use(session(sessionOptions))    //after execution we now use req.session property
 

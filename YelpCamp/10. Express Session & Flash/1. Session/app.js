@@ -8,7 +8,7 @@ const app = express()
 sessionOption ={
     secret:'thisisnotagoodsecret',  //secret just like cookies
     resave:false,                   //for remove warning
-    saveUninitialized:false         //for remove warning
+    saveUninitialized:true         //for remove warning
 }
 app.use(session(sessionOption))     //after execution we now use req.session property
 
