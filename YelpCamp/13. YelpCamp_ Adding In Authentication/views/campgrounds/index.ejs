@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %> <!-- automatic views folder theke search start korbe -->
+    <h1 class="text-center mb-5">All Campgrounds</h1>
+    <div class="row justify-content-around">
+        <% for(let campground of campgrounds){%>
+            <div class="card col-6 my-3" style="width: 38rem;">
+                <img src="<%= campground.image %> " class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= campground.title %>
+                    </h5>
+                    <p class="card-text">
+                        <%= campground.description %>
+                    </p>
+                    <h5 class="card-text text-muted">
+                        <%= campground.location %>
+                    </h5>
+                    <a href="/campgrounds/<%= campground.id %> " class="btn btn-primary">View <%= campground.title %>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+    </div>
