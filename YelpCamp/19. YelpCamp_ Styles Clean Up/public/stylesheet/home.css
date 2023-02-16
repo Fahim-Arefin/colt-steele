@@ -1,0 +1,16 @@
+body {
+    background-color: #232323;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://res.cloudinary.com/dshiwsbap/image/upload/v1676321918/YelpCamp/pexels-cliford-mervil-2398220_ieo6hd.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.root {
+    height: 700px;
+    /* background-color: aqua; */
+    margin: auto;
+    min-width: 50%;
+    max-width: 80%;
+    margin-bottom: 200px;
+}

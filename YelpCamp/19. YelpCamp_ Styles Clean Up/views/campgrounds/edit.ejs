@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') %> <!-- automatic views folder theke search start korbe -->
+    <h1 class="text-center mb-4">Edit A Campground</h1>
+    <div class="row justify-content-center">
+        <div class="col-6 ">
+            <form action="/campgrounds/<%= specificCampground._id %>?_method=PATCH" method="post" novalidate
+                class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="camp[title]"
+                        value="<%= specificCampground.title %> " placeholder="title" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="location" name="camp[location]"
+                        value="<%= specificCampground.location %>" placeholder="location" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Add images</label>
+                    <input type="file" class="form-control" id="image" name="image" multiple>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" class="form-control" id="price" name="camp[price]"
+                        value="<%= specificCampground.price %>" placeholder="0.00" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="camp[description]" rows="3"
+                        required><%= specificCampground.description %></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h3>Choose image to delete</h3>
+                    <% specificCampground.image.forEach((img,i)=>{ %>
+                        <img src="<%= img.thumbnil %>" class="img-thumbnail" alt=""> <!-- img-thumbnil to resize image-->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deleteImages[]" value="<%= img.filename %>" id="image-<%= i %>">
+                            <label class="form-check-label" for="image-<%= i %>">
+                              delete?
+                            </label>
+                        </div>
+                    <% }) %>
+                </div>
+                <button class="btn btn-info">update Campground</button>
+            </form>
+            <a class="btn btn-primary my-3" href="/campgrounds/<%= specificCampground._id %>">cancel</a>
+        </div>
+
+    </div>

@@ -1,0 +1,19 @@
+<% if(successMessage && successMessage.length){ %> 
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= successMessage %>   <!-- successMessage is a flash message which is passed through flash middleware-->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %> 
+
+
+<% if(errorMessage && errorMessage.length){ %> 
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <%= errorMessage %>   <!-- successMessage is a flash message which is passed through flash middleware-->
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %> 
+
+
+<!-- successMessage is a array so we check if its empty or not, if empty then no need to 
+     show, because we added flash message if required and we add it to boilerplate, so boilerplate 
+     will always shows this if we do not do if else  -->
